@@ -11,3 +11,5 @@ nltk
 PyPDF2==1.28.2
 scikit-learn
 pandas
+flask_restful
+flask_cors
