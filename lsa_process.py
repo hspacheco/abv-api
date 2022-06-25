@@ -7,7 +7,6 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.preprocessing import Normalizer
 from sklearn import metrics
 from sklearn.cluster import KMeans, MiniBatchKMeans
-from tika import parser
 import nltk
 from nltk.corpus import stopwords
 import pandas as pd
@@ -31,11 +30,6 @@ document_sentences = []
 document_dict = {}
 file_names = []
 
-def convert_pdf_to_txt(path):
-    raw = parser.from_file(path)
-    text = raw['content']
-    return str(text).replace("\n", " ").replace("\\", " ")
-  
 def no_number_preprocessor(tokens):
     r = re.sub('(\d)+', '', tokens.lower())
     return r
