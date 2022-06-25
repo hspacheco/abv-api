@@ -16,4 +16,4 @@ flask_cors
 pyrebase
 urllib3
 uplink
-pycrypto
+pycryptodome
