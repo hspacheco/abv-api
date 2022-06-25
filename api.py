@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_restful import reqparse, abort, Api, Resource
 from flask_cors import CORS
-from firebase import download_file, download_all_files
+from firebase import download_file, download_all_files, get_all_files
 from lsa_process import get_LSA, clear_files
 import os
 
@@ -230,66 +230,25 @@ SYMPTOMS = [
     }
 ]
 
-FILE_NAMES = [
-  'EF555196',
-  'DQ181797',
-  'AF547225',
-  'KX197192',
-  'KU556802',
-  'AY692465',
-  'FJ882857',
-  'KU820897',
-  'AY606062',
-  'AY326412',
-  'LC146714',
-  'AB010982',
-  'U18425',
-  'DQ859059',
-  'EU359008',
-  'AY593235',
-  'AF192906',
-  'AF547232',
-  'DQ678928',
-  'AY099337',
-  'KF383015',
-  'L11422',
-  'FJ807886',
-  'KX879603',
-  'AY770511',
-  'AY702030',
-  'KX827268',
-  'KM851039',
-  'LN999960',
-  'AY099340',
-  'KY435454',
-  'KY435455',
-  'KU752544',
-  'HM067744'
-]
-
-# get_LSA()
 
 class SymptomsList(Resource):
     def get(self):
-        return SYMPTOMS
-
-    # def post(self):
-    #     args = parser.parse_args()
-    #     todo_id = int(max(TODOS.keys()).lstrip('todo')) + 1
-    #     todo_id = 'todo%i' % todo_id
-    #     TODOS[todo_id] = {'task': args['task']}
-    #     return TODOS[todo_id], 201
+       return SYMPTOMS, 200
 
 class FileNames(Resource):
     def get(self):
-        return FILE_NAMES
+        return get_all_files()
 
 class LsaScore(Resource):
     def get(self):
-      download_all_files();
-      lsa_result = get_LSA()
-      clear_files()
-      return lsa_result
+      parser = reqparse.RequestParser()
+      parser.add_argument('symptom', action='append', location='args')
+      args = parser.parse_args()
+
+      # download_all_files()
+      # lsa_result = get_LSA()
+      # clear_files()
+      return args['symptom'], 200
 
 
 
