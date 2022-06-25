@@ -1,4 +1,4 @@
-from pyrebase
+import pyrebase
 import os
 
 firebaseConfig = {

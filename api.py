@@ -235,7 +235,7 @@ class SymptomsList(Resource):
 class FileNames(Resource):
     def get(self):
         return firebase.get_all_files()
-
+  
 class LsaScore(Resource):
     def get(self):
       parser = reqparse.RequestParser()
