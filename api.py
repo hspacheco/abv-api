@@ -15,7 +15,18 @@ firebaseConfig = {
   "projectId": "abv-api",
   "storageBucket": "abv-api.appspot.com",
   "databaseURL": "",
-  "serviceAccount": "serviceAccountKey.json"
+  "serviceAccount": {
+    "type": "service_account",
+    "project_id": "abv-api",
+    "private_key_id": "c7b85dd07ea738a4427a369bf7575b8b383797c1",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCpFSTmTCnHNSNU\nFQTyFatWs+2xMpARXBpOuhfVbjrW/yMmLK1kzNvo/D7RztzG0n6Voc6qmtFNFs98\nzOP0sIDRHHJ/XTyZGu0au0NF3AziemPwA0g/l2PR6iRnvVsciUFsxk3tm8R2kKav\nRH6mn73T7axIcNQODmGSU9uzm30eTx+UDtLEKEhxFYmKPnoHWteqetHfa5yEOGK3\ntXrB4rmn7FRq1n5+2fZZU28chGmtQYe6l3NpKEmHONWZPJNlDgijBI4XVW5FApRF\nNmS98HR0Vo5VA92TFeSwhNNkhYtqy4NVfH1wJByysLpoHPjz9/yx+A9pJebcw6yX\nsyYAcxb1AgMBAAECggEACNT32xIrEEZGkvnXp1jg+VkndyQ304EzY0FAcAM0nJx5\nBO+8Kc5d092/3vOb3FKajuJ1qi0jEnPxoPMOqPyJsLDNp9Vexx/nxUC+TZBfJ7PL\nerL1osUp67PRO8caYPpg31QR/TihrFeT2Oox9BHWzNnBaRlHqXeiD+O2QVf8mhAc\niyUoaiRyTGl8uFmE2AAZZf9B5Wh7AMhdgm7HGSPJ7zJ3tWEjXU4fBETGRNoniUfO\ndeXyTCB5pc4ZLPSqQc52c1JOQsI35mMBy5fPn2VjaO5g78L6Nkdr1UeEHAJAohxk\nnCnu2KxZmvTUVGVe/X+PIp40GdEOq0dZV5SpKDVzcwKBgQDdnkfV3sF59jUnd4Im\nsFhlsQ1G9ps0tkxvbIWP85Jsu1Lf0J5U6NJhmH1t9Ck/rIfghFdVqjWrtsUYw7wQ\nUPAebNzlT5tQcKBk1oTz+Vff6OI4YRL+DUWGbFGzskhOGPeX4S11vRZTnonX9RnC\nocKxihqJ4ADNfl9tbSMww9ILfwKBgQDDUF+NKV9P3ziXWM0UMohYlS7qmf+w6L69\nRTmEHp4LHfNUcwDjdhYU025HZc29F3iCGsu2JGks6wGb7QIKHuCaePhfzOv53TCa\nhF87AlC8yXCQo1g8iWKc6AeQL/7l44a/s9l66PPyvABIrivE7H4TYDNmna+K68hQ\nFKFTt5mniwKBgCas0aJ8Lk2Hbv1FONxhl/ufK08ACFPpoGstiB14B0ycYDkY4hi1\nTMmlX/ZJTs2C4W+ICOm1O4qM6daJig9a4JyeqOoHu3YNQaB3Y1pkYDZ+IMRwBG17\niW+NBbETYtTmPIcvz8wlRHkxSKL8bhNuQVjUXg9DnUA/Vo31JtgCxGwnAoGBAKai\nqgMbqy/P+M5XexCiVGWPUiniHZ5n1GRS7VFldd1yPipsu/NUyl4WTV4o4zFTFwOZ\nrPfHdNxX3FWWDkloMqRYVUAW67WQG2mZSk5kGVIYYytj0WJErJfF9r3z1Pt59XsV\nDJWqrocIEw3vW3R1eNM7Hl+MZTqXE54PG9z7JeMlAoGASuZ0SPJg9XwcHGevPaOT\nu5QzgGIaKOwPM2hyiy00ibKR+o5L1+oae5oZjNdXe3NiAU/bz075zrmZFY8XKoMy\npp057fcSqZdeLeV3ZIplMRDvo4yC+CniBHaJsdciA6qOJekZf1+DmZESg0li0BpO\n6dLY1YWPTy9j3Grvf/88F4w=\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-eiryc@abv-api.iam.gserviceaccount.com",
+    "client_id": "102445652903248906867",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-eiryc%40abv-api.iam.gserviceaccount.com"
+  }
 };
 
 firebase_storage = pyrebase.initialize_app(firebaseConfig)
