@@ -15,3 +15,4 @@ flask_restful
 flask_cors
 pyrebase==3.*
 urllib3
+uplink
