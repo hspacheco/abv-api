@@ -17,3 +17,4 @@ pyrebase
 urllib3
 uplink
 pycryptodome
+PyJWT
