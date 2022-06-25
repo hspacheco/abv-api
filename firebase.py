@@ -1,5 +1,5 @@
 import pyrebase
-# import os
+import os
 
 firebaseConfig = {
   "apiKey": "AIzaSyDhz498FkxVmBi5vANkCAUB1vLnKtk9Roo",
@@ -25,13 +25,13 @@ def get_all_files():
   
   return storageFiles
 
-# def download_all_files():
-#   file_names = get_all_files()
-#   if (os.path.isdir('artigos') == False):
-#     os.mkdir('artigos')
+def download_all_files():
+  file_names = get_all_files()
+  if (os.path.isdir('artigos') == False):
+    os.mkdir('artigos')
   
-#   for file_name in file_names:
-#     download_file(file_name, f'artigos/{file_name}')
+  for file_name in file_names:
+    download_file(file_name, f'artigos/{file_name}')
 
 # clear_files()
 

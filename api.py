@@ -2,8 +2,8 @@ from flask import Flask
 from flask_restful import reqparse, abort, Api, Resource
 from flask_cors import CORS
 from firebase import download_file, download_all_files, get_all_files
-# from lsa_process import get_LSA, clear_files
-# import os
+from lsa_process import get_LSA, clear_files
+import os
 
 app = Flask(__name__)
 api = Api(app)
