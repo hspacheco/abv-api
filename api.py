@@ -1,8 +1,8 @@
 from flask import Flask
 from flask_restful import reqparse, abort, Api, Resource
 from flask_cors import CORS
-# from firebase import download_file, download_all_files, get_all_files
-# from lsa_process import get_LSA, clear_files
+from firebase import download_file, download_all_files, get_all_files
+from lsa_process import get_LSA, clear_files
 # import os
 
 app = Flask(__name__)
@@ -238,22 +238,22 @@ class SymptomsList(Resource):
 #     def get(self):
 #         return get_all_files()
 
-# class LsaScore(Resource):
-#     def get(self):
-#       parser = reqparse.RequestParser()
-#       parser.add_argument('symptom', action='append', location='args')
-#       args = parser.parse_args()
+class LsaScore(Resource):
+    def get(self):
+      parser = reqparse.RequestParser()
+      parser.add_argument('symptom', action='append', location='args')
+      args = parser.parse_args()
 
-#       # download_all_files()
-#       # lsa_result = get_LSA()
-#       # clear_files()
-#       return args['symptom'], 200
+      # download_all_files()
+      # lsa_result = get_LSA()
+      # clear_files()
+      return args['symptom'], 200
 
 
 
 api.add_resource(SymptomsList, '/symptoms')
 # api.add_resource(FileNames, '/file-names')
-# api.add_resource(LsaScore, '/lsa-score')
+api.add_resource(LsaScore, '/lsa-score')
 
 if __name__ == '__main__':
     app.run(debug=True)
