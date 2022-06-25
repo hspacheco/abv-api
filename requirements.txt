@@ -13,5 +13,5 @@ scikit-learn
 pandas
 flask_restful
 flask_cors
-pyrebase
+pyrebase==3.*
 urllib3
