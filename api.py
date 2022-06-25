@@ -1,7 +1,6 @@
 from flask import Flask
 from flask_restful import reqparse, abort, Api, Resource
 from flask_cors import CORS
-import firebase
 # from lsa_process import get_LSA, clear_files
 import os
 
