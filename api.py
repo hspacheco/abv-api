@@ -1,8 +1,8 @@
 from flask import Flask
 from flask_restful import reqparse, abort, Api, Resource
 from flask_cors import CORS
-# from lsa_process import get_LSA, clear_files
-import firebase
+from lsa_process import get_LSA, clear_files
+# import firebase
 import os
 
 app = Flask(__name__)
@@ -235,7 +235,7 @@ class SymptomsList(Resource):
 class FileNames(Resource):
     def get(self):
         return firebase.get_all_files()
-  
+
 class LsaScore(Resource):
     def get(self):
       parser = reqparse.RequestParser()
