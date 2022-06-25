@@ -4,6 +4,7 @@ from flask_cors import CORS
 from lsa_process import get_LSA, clear_files
 import os
 import pyrebase
+import firebase
 
 app = Flask(__name__)
 api = Api(app)
