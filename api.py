@@ -234,9 +234,9 @@ class SymptomsList(Resource):
     def get(self):
        return SYMPTOMS, 200
 
-class FileNames(Resource):
-    def get(self):
-        return get_all_files()
+# class FileNames(Resource):
+#     def get(self):
+#         return get_all_files()
 
 # class LsaScore(Resource):
 #     def get(self):
@@ -252,7 +252,7 @@ class FileNames(Resource):
 
 
 api.add_resource(SymptomsList, '/symptoms')
-api.add_resource(FileNames, '/file-names')
+# api.add_resource(FileNames, '/file-names')
 # api.add_resource(LsaScore, '/lsa-score')
 
 if __name__ == '__main__':
