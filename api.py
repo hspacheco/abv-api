@@ -233,7 +233,7 @@ SYMPTOMS = [
 
 class SymptomsList(Resource):
     def get(self):
-       return SYMPTOMS
+       return SYMPTOMS, 200
 
 class FileNames(Resource):
     def get(self):
