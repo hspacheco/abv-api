@@ -7,11 +7,14 @@ firebaseConfig = {
   "projectId": "abv-api",
   "storageBucket": "abv-api.appspot.com",
   "databaseURL": "",
-  # "serviceAccount": {}
+  "serviceAccount": "serviceAccountKey.json"
 };
 
-firebase_storage = pyrebase.initialize_app(firebaseConfig)
-storage = firebase_storage.storage()
+try:
+  firebase_storage = pyrebase.initialize_app(firebaseConfig)
+  storage = firebase_storage.storage()
+except Exception as inst:
+  print(inst.args)
 
 def download_file(file_ref, save_name):
   storage.child(file_ref).download(save_name)
