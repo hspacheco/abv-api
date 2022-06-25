@@ -8,6 +8,19 @@ app = Flask(__name__)
 api = Api(app)
 CORS(app)
 
+firebaseConfig = {
+  "apiKey": "AIzaSyDhz498FkxVmBi5vANkCAUB1vLnKtk9Roo",
+  "authDomain": "abv-api.firebaseapp.com",
+  "projectId": "abv-api",
+  "storageBucket": "abv-api.appspot.com",
+  "databaseURL": "",
+  "serviceAccount": "serviceAccountKey.json"
+};
+
+firebase_storage = pyrebase.initialize_app(firebaseConfig)
+storage = firebase_storage.storage()
+
+
 # download_file('KX879603.pdf', 'artigos/qualquer.pdf')
 
 SYMPTOMS = [
