@@ -1,4 +1,4 @@
-from pyrebase import initialize_app
+from pyrebase
 import os
 
 firebaseConfig = {
@@ -10,11 +10,8 @@ firebaseConfig = {
   "serviceAccount": "serviceAccountKey.json"
 };
 
-try:
-  firebase_storage = initialize_app(firebaseConfig)
-  storage = firebase_storage.storage()
-except Exception as inst:
-  print(inst.args)
+firebase_storage = pyrebase.initialize_app(firebaseConfig)
+storage = firebase_storage.storage()
 
 def download_file(file_ref, save_name):
   storage.child(file_ref).download(save_name)
