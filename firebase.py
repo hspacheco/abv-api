@@ -1,4 +1,4 @@
-import pyrebase
+from pyrebase import initialize_app
 import os
 
 firebaseConfig = {
@@ -11,7 +11,7 @@ firebaseConfig = {
 };
 
 try:
-  firebase_storage = pyrebase.initialize_app(firebaseConfig)
+  firebase_storage = initialize_app(firebaseConfig)
   storage = firebase_storage.storage()
 except Exception as inst:
   print(inst.args)
