@@ -26,10 +26,6 @@ stopset = set(stopwords.words("english"))
 stopset.update(["et", "al", "chikv", "virus"])
 np.seterr(invalid='ignore')	
 
-document_sentences = []
-document_dict = {}
-file_names = []
-
 def no_number_preprocessor(tokens):
     r = re.sub('(\d)+', '', tokens.lower())
     return r
@@ -56,10 +52,12 @@ def get_file_sentences(file_name):
   
   return file_sentences
 
-def get_LSA():
-  for root, dirs, files in os.walk('./artigos'):
-    for filename in files:
-        file_names.append(filename)
+def get_LSA(file_names):
+  document_sentences = []
+  document_dict = {}
+
+  print('lsa filenames')
+  print(file_names)
 
   for filename_string in file_names:
     file_sentence = get_file_sentences(filename_string)
@@ -204,7 +202,7 @@ def get_LSA():
         columns = terms
     ).T
     
-    main_matrix[f'abs_{key}'] = np.abs(encodingMatrix[f'abs_{key}'])
+    main_matrix[f'{key}'] = np.abs(encodingMatrix[f'abs_{key}'])
   
   pd.DataFrame(main_matrix).to_csv("./main_matrix.csv")
   return process_main_matrix(main_matrix, symptoms_arr)

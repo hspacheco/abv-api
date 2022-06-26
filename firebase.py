@@ -21,12 +21,11 @@ def get_all_files():
   storageFiles = [] 
   for file in files:
     storageFiles.append(file.name)
-    print(file.name)
-  
+
   return storageFiles
 
-def download_all_files():
-  file_names = get_all_files()
+def download_all_files(file_names):
+  # file_names = get_all_files()
   if (os.path.isdir('artigos') == False):
     os.mkdir('artigos')
   
