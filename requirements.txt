@@ -22,7 +22,7 @@ grpcio==1.46.3
 grpcio-status==1.46.3
 gunicorn==20.1.0
 httplib2==0.20.4
-idna==3.3
+idna==2.5
 importlib-metadata==4.11.4
 itsdangerous==2.1.2
 Jinja2==3.1.2
@@ -41,12 +41,12 @@ pyasn1-modules==0.2.8
 pycryptodome==3.4.3
 pyparsing==3.0.9
 PyPDF2==1.28.2
-Pyrebase==3.0.27
+git+https://github.com/Selich/Pyrebase@master#egg=Pyrebase
 python-dateutil==2.8.2
 python-jwt==2.0.1
 pytz==2022.1
 regex==2022.6.2
-requests==2.28.0
+requests==2.25.0
 requests-toolbelt==0.7.0
 rsa==4.8
 scikit-learn==1.1.1
