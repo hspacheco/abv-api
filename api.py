@@ -7,7 +7,6 @@ from firebase import get_all_files, download_all_files
 
 app = Flask(__name__)
 api = Api(app)
-server = app.server
 CORS(app)
 
 SYMPTOMS = [
