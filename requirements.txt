@@ -16,5 +16,5 @@ flask_cors
 pyrebase
 urllib3
 uplink
-pycryptodome
+pycryptodome==3.10.1
 PyJWT
